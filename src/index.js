@@ -9,9 +9,9 @@ import Provider from "./context/ContextoFormulario";
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider>
+      {/* <Provider> */}
         <App />
-      </Provider>
+      {/* </Provider> */}
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")

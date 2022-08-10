@@ -2,7 +2,14 @@
 import { createContext, useReducer } from "react";
 import types from "./types";
 
-export const Context = createContext()
+export const ContextForm = createContext()
+
+
+/**
+ * 
+ * @param {{initalState}} props 
+ * @returns 
+ */
 
 const Provider = (props) => {
     const initialState = {
@@ -45,14 +52,14 @@ const Provider = (props) => {
     const [state, dispatch] = useReducer(reducer, initialState)
 
     return (
-        <Context.Provider
+        <ContextForm.Provider
             value={{
                 state,
                 dispatch
             }}
         >
             {props.children}
-        </Context.Provider>
+        </ContextForm.Provider>
     )
 }
 

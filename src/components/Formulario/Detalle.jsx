@@ -1,5 +1,5 @@
 import React, {useContext} from "react";
-import { Context } from "../../context/ContextoFormulario";
+import { ContextForm } from "../../context/ContextoFormulario";
 
 const Detalle = () => {
   // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
@@ -8,7 +8,7 @@ const Detalle = () => {
   const {
     state,
     dispatch
-  } = useContext(Context)
+  } = useContext(ContextForm)
 
 
   return (

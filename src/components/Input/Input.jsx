@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useContext } from "react";
 import types from "../../context/types";
-import { Context } from "../../context/ContextoFormulario";
+import { ContextForm } from "../../context/ContextoFormulario";
 
 const Input = ({ name, label, type = "text", actionType}) => {
   // Aqui deberíamos acceder al estado global para poder obtener los datos
@@ -9,7 +9,7 @@ const Input = ({ name, label, type = "text", actionType}) => {
   const {
     state,
     dispatch
-  } = useContext(Context)
+  } = useContext(ContextForm)
 
   // También, utilizaremos un estado local para manejar el estado del input.
   const [inputValue, setInputValue] = useState()
