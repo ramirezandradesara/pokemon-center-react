@@ -4,7 +4,6 @@ import types from "./types";
 
 export const ContextForm = createContext()
 
-
 /**
  * 
  * @param {{initalState}} props 
@@ -22,6 +21,14 @@ const Provider = (props) => {
             nombre: ''
         }
     }
+    /**
+     * Función reductora
+     * @param {{
+     * payload,
+     * type
+     * }} action 
+     * @returns 
+     */
 
     const reducer = (state, action) => {
         switch (action.type) {
@@ -32,7 +39,7 @@ const Provider = (props) => {
                         ...state.trainer,
                         [action.payload.clave]: action.payload.valor
                     }
-                }
+                };
 
             case types.pokemonUpdate:
                 return {
@@ -41,12 +48,12 @@ const Provider = (props) => {
                         ...state.pokemon,
                         [action.payload.clave]: action.payload.valor
                     }
-                }
+                };
 
             default:
                 throw new Error(`Unknown action type: ${action.type}`);
         }
-    }
+    };
 
 
     const [state, dispatch] = useReducer(reducer, initialState)
@@ -60,7 +67,7 @@ const Provider = (props) => {
         >
             {props.children}
         </ContextForm.Provider>
-    )
-}
+    );
+};
 
 export default Provider

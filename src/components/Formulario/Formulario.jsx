@@ -13,6 +13,10 @@ import Provider from "../../context/ContextoFormulario";
 // Recuerda cual es el paso que debemos tomar para que nuestros
 // componentes puedan consumir un estado global.
 
+/**
+ * Componente que muestra el formulario, donde se llama tanto a los componentes Inputs y Detalle
+ * @returns {JSX.Element}
+ */
 
 const Formulario = () => {
   return (
@@ -57,7 +61,6 @@ const Formulario = () => {
               </div>
             </div>
             <Detalle />
-
           </div>
         </div>
       </Provider>

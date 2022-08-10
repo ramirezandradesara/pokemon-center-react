@@ -1,5 +1,10 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
 import { ContextForm } from "../../context/ContextoFormulario";
+
+/**
+ * Componente que muestra el detalle del formulario, con la información ingresada en los inputs
+ * @returns {JSX.Element}
+ */
 
 const Detalle = () => {
   // Aqui deberíamos obtener los datos del formulario para poder mostrarlo en
